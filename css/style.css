@@ -1,0 +1,1441 @@
+html{
+    box-sizing: border-box;/*Родитель (это нужно чтобы падинги всех элементов учитывались в размерах элементов)*/
+}
+
+*,
+*::after, *::before{
+    box-sizing: inherit;/*Наследник*/
+}
+
+body{
+    color: #000;
+    font-family: 'Comfortaa', sans-serif;
+    /* font-family: 'Yeseva One', serif; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+section{
+    padding-bottom: 150px;
+}
+
+.title{
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-family: 'Yeseva One', cursive;
+}
+
+.button{
+    padding: 18px 54px;
+    background: #FFBD59;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.section--decor{
+    position: relative;
+}
+
+.section--decor::before{/*Для свечи*/
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url(../images/section-decor.png);
+    width: 22px;
+    height: 30px;
+}
+
+.section--decor::after{/*Для линии от свечи*/
+    content: '';
+    position: absolute;
+    background-color: #7B6152;
+    left: 22px;
+    bottom: 13px;
+    width: 1000%;
+    height: 1px;
+}
+
+/*Header*/
+
+.header{
+    background-color: #FFF8F3;
+}
+
+.container{
+    max-width: 1180px;/*Без box-sizing: border-box; было бы 1160px*/
+    /*Чтобы не прилипало к устройствам слева и справа*/
+    padding-left: 10px;
+    padding-right: 10px;
+    /*Чтобы контейнер был по центру*/
+    margin: 0 auto;
+}
+
+.header__inner{
+    padding-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__btn{/*Кнопка - пять полос (для бургер меню)*/
+    display: none;
+    width: 30px;
+    height: 25px;
+    background-color: transparent;/*Прозрачный*/
+    flex-direction: column;/*Друг под другом*/
+    justify-content: space-between;
+}
+
+.menu__btn span{
+    height: 1px;
+    background-color: #7B6152;
+    width: 100%;
+}
+
+.menu__list{
+    display: flex;
+    gap: 20px;
+}
+
+.menu__list-link{
+    text-transform: uppercase;
+}
+
+.phone{/*Phone-svg*/
+    position: relative;
+
+}
+
+.phone::before{/*Phone-svg*/
+    content: '';
+    position: absolute;
+    background-image: url(../images/phone.svg);
+    width: 20px;
+    height: 20px;
+    left: -23px;
+    top: -3px;
+}
+
+/*Main section*/
+
+.main{
+    background-color: #FFF8F3;
+    overflow-x: clip;
+}
+
+.top{
+    padding-top: 40px;
+    padding-bottom: 150px;
+}
+
+.top__inner{
+    position: relative;
+}
+
+.top__content{
+    width: 370px;
+    padding: 150px 0 250px;
+}
+
+.top__title{
+    font-size: 30px;
+    font-family: 'Yeseva One', serif; 
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.top__text{
+    margin-bottom: 48px;
+
+}
+
+.top__buy{/*Button*/
+    padding: 18px 54px;
+    background: #FFBD59;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.top__img{
+    position: absolute;
+    top: 0;
+    left: 120px;
+}
+
+.top__img-l {
+    display: flex;
+}
+
+.top__img-m {
+    width: 309px;
+    display: none;
+}
+
+.top__img-s {
+    width: 309px; 
+    display: none;
+}
+
+/*Sectoin About Us*/
+
+.about{
+    background: #A5978E;
+    padding: 50px 0 50px;
+    color: #FAFAFA;
+    margin-bottom: 150px;
+}
+
+.about__inner{
+    display: flex;
+    align-items: center;
+}
+
+.about__content{
+    min-width: 370px;
+}
+
+
+
+.about__text{
+    margin-bottom: 15px;
+}
+/*Картинки в секции About Us*/
+.about__list{
+    display: flex;
+    padding-left: 110px;
+    padding-bottom: 48px;
+    align-items: center;
+    gap: 0 20px;/*Для растояния между картинками*/
+    flex-basis: 930px;
+}
+
+.about__item-img{
+    margin-bottom: 10px;
+}
+
+.about__item-text{
+    font-size: 11px;
+}
+
+/*Section Products*/
+
+.section__inner{
+    display: grid;
+    grid-template-columns: 370px auto;
+}
+
+.section__content-descr{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-bottom: 92px;
+}
+
+.products__content{
+    gap: 50px 90px;
+}
+
+.products__item{
+    width: 290px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.products__item-img{
+    margin-bottom: 8px;
+}
+
+.products__item-price{
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-family: 'Yeseva One', serif;
+    font-weight: 400;
+}
+
+.products__item-title{
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-family: 'Yeseva One', serif;
+    font-weight: 400;
+}
+
+.products__item-text{
+    margin-bottom: 27px;
+    font-size: 12px;
+}
+
+/*Section - Этапы создания свечей*/
+
+.steps__list{
+    gap: 70px 25px;
+    counter-reset: number;/*Для цифр*/
+}
+
+.steps__item{
+    display: flex;
+    gap: 40px;
+    /*Для цифр*/
+    list-style-type: none;
+    position: relative;
+}
+/*Для цифр*/
+.steps__item::before{
+    counter-increment: number;
+    content: '0' counter(number);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 30px;
+    color: #BEA495;
+    font-family: 'Yeseva One', cursive;
+}
+
+.steps__item:nth-child(n+10):before{/*Чтобы было 10, а не 010*/
+    content: counter(number);
+}
+
+.steps__item.steps__item--even::before{/*У четных строк нумерация справа внизу*/
+    left: auto;
+    right: 0;
+}
+
+.steps__item-text{
+    flex-basis: 174px;
+    padding-bottom: 40px;
+}
+
+/*Section - Наши курсы*/
+
+.courses__item-img{
+    position: relative;/*Чтобы именно относительно этого элемента позицианировались другие*/
+    color: #fff;
+    font-size: 11px;
+    font-family: 'Yeseva One', cursive;
+}
+
+.courses__title{
+    padding: 15px;
+    left: 10px;
+    top: 45%;
+}
+
+.courses__time{
+    padding: 7px 10px;
+    left: 10px;
+    top: 60%;
+}
+
+.courses__time span{
+    font-size: 10px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.courses__price{
+    padding: 19px 10px;
+    right: 0;
+    bottom: 2px;
+}
+
+.courses__title, .courses__time, .courses__price{
+    background-color: #BEA495;
+    position: absolute;
+}
+
+/*Section - Наши преподаватели*/
+
+.team{
+    background-color: #A5978E;
+    padding: 80px 0 60px;
+    color: #fff;
+    margin-bottom: 150px;
+}
+
+.team__content{
+    padding-bottom: 0;
+    gap: 75px;
+}
+
+.team__item{
+    position: relative;
+}
+
+.team__item-box{
+    background-color: #7B6152;
+    text-align: center;
+    position: absolute;
+    padding: 15px 10px 16px;
+    width: 165px;
+    bottom: 13px;
+    right: 33px;
+    z-index: 4;/*Чтобы были поверх других элементов*/
+}
+
+.team__item-name{
+    font-size: 12px;
+    font-family: 'Yeseva One', cursive;
+}
+
+.team__item-descr{
+    font-size: 10px;
+}
+
+/*Section - Feedback*/
+
+.feedback__descr{
+    margin-right: 20px;
+}
+
+.feedback__content{
+    padding-bottom: 110px;
+}
+
+.feedback__slider{
+    width: 760px;
+    overflow: hidden;
+}
+
+.feedback__item{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0 16px;
+    align-items: center;
+}
+
+.feedback__item-video{
+    position: relative;
+}
+
+.feedback__item-videobtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/*Чтобы кнопка play была ровно по центру картинки*/
+    background: transparent;
+}
+
+.feedback__item-sociallink{
+    margin-bottom: 12px;
+}
+
+.feedback__item-name{
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: 'Yeseva One', cursive;
+}
+
+.feedback__item-text{
+    margin-bottom: 15px;
+}
+
+.feedback__item-content{
+    padding-bottom: 70px;
+}
+
+.feedback__item-btn{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.feedback__content .swiper-pagination{
+    bottom: 50px;
+}
+
+.swiper-pagination-bullet{/*Этот класс есть в инспекторе кода*/
+    background-color: #BEA495;
+    width: 53px;
+    height: 4px;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active{/*Этот класс есть в инспекторе кода*/
+    background-color: #7B6152;
+}
+
+/*Section - Certificates*/
+
+.certificates__descr{
+    margin-right: 20px;
+}
+
+.certificates__content{
+    padding-bottom: 114px;
+}
+
+.certificates__slider{
+    width: 1135px;
+    overflow: hidden;
+}
+
+.certificates__content .swiper-pagination{
+    bottom: 60px;
+    text-align: left;
+}
+
+/*Section - Frequently asked questions*/
+
+.acordeon{
+
+}
+
+.acordeon__item{
+    background-color: #fafafa;
+    margin-bottom: 10px;
+}
+
+.acordeon__title{
+    font-family: 'Yeseva One', cursive;
+    color: #000;
+    font-size: 16px;
+    display: block;
+    background-color: transparent;
+    padding: 16px 50px 16px 13px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+}
+
+.acordeon__title::after{/*Стрелка вниз в акордеон-меню*/
+    content: '';
+    background-image: url(.././images/vector.svg);
+    color: #000;
+    width: 16px;
+    height: 16px;
+    position: absolute;/*Чтобы она отображалась*/
+    right: 26px;
+    top: 17px;
+}
+
+.acordeon__title.acordeon__title--active::after{/*Чтобы при открытии ответа на вопрос стрелочка переворачивалась*/
+    transform: rotate(180deg);
+}
+
+.acordeon__text{
+    opacity: 0;
+    max-height: 0;
+    transition: opacity .3s, max-height .3s;
+}
+
+.acordeon__text-answer{
+    padding: 20px 40px;
+}
+
+.acordeon__text.acordeon__text--visible{
+    opacity: 1;
+}
+
+/*Section - Feedback-2*/
+
+.promo{
+    background: url(.././images/promo-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 140px 0;
+}
+
+.promo__inner{
+    display: flex;
+    align-items: center;
+}
+
+.promo__text{
+    font-family: 'Yeseva One', cursive;
+    font-size: 40px;
+    color: #FFF;
+    padding-left: 56px;
+    max-width: 764px;
+    margin-right: 110px;
+}
+
+.promo__link{
+    color: #272727;
+    background-color: #FFBD59;
+    display: inline-block;
+    text-align: center;
+    padding: 14px 25px 12px;
+    font-family: Comfortaa;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/*Section - Contact Form*/
+
+.contact-form{
+    padding: 150px 0 50px;
+}
+
+.contact-form__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form{
+    background-color: #FFF;
+    width: 664px;
+    padding: 75px 42px 67px;
+}
+
+.contact-form__title{
+    font-family: 'Yeseva One', cursive;
+    margin-bottom: 60px;
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contact-form__input{
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    padding: 7px 10px;
+    color: #000;
+}
+
+.contact-form__input::placeholder{
+    color: #B3B3B3;
+    font-family: Comfortaa;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contact-form__btn{
+    background-color: #FFBD59;
+    color: #272727;
+    font-family: Comfortaa;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 36px;
+    padding: 17px 34px;
+}
+
+/*Footer*/
+
+.footer{
+    padding-top: 40px;
+    padding-bottom: 35px;
+}
+
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__contacts{
+    display: flex;
+    flex-direction: column;/*Чтобы все элементы этого div были друг под другом*/
+    width: 230px;
+}
+
+.email{
+    margin: 17px 0;
+}
+
+.footer__social{
+    display: flex;
+    gap: 15px;
+}
+
+
+/*Adaptives*/
+
+@media (max-width: 1050px){
+    /*Section - Этапы создания свечей*/
+
+    .steps__list{
+        gap: 37px 35px;
+    }
+
+    .steps__item{
+        gap: 0 30px;
+    }
+
+}
+
+@media (max-width: 1000px){
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .top__content{
+        width: 333px;
+        padding: 95px 0 70px;
+    }
+
+    .top__img{
+        left: 160px;
+    }
+
+    .top__img-l{
+        width: 655px;
+    }
+
+    .top__text{
+        margin-bottom: 20px;
+    }
+
+    /*Sectoin About Us*/
+
+    .about__content{
+        min-width: 300px;
+    }
+
+    .about__list{
+        padding-left: 20px;
+    }
+
+    /*Section Products*/
+
+    .section__inner{
+        grid-template-columns: 290px auto;
+        gap: 0 10px;
+    }
+
+    .products__content{
+        gap: 67px;
+    }
+
+    .section__text{
+        font-size: 10px;
+    }
+
+    /*Section - Наши преподаватели*/
+
+    .team__content{
+        gap: 30px 20px;
+    }
+
+    .team{
+        padding: 50px 0;
+    }
+
+    /*Section - Feedback*/
+
+    .feedback__inner{
+        grid-template-columns: 260px auto;
+    }
+
+    .feedback__slider{
+        width: 690px;
+    }
+
+    /*Section - Certificates*/
+
+    .certificates__content img{
+        width: 280px;
+    }
+
+    .certificates__slider{
+        width: 880px;
+    }
+
+    .certificates__content .swiper-pagination{
+        text-align: center;
+    }
+
+    .promo__link{
+        min-width: 135px;
+    }
+
+    .promo__text{
+        padding-left: 0;
+    }
+
+    /*Section - Contact Form*/
+
+    .contact-form__img{
+        width: 335px;
+    }
+}
+
+@media (max-width: 980px){
+    /*Section - Этапы создания свечей*/
+
+    .steps__title{
+        font-size: 30px;
+    }
+
+    .steps__list{
+        gap: 37px 35px;
+    }
+
+    .steps__item{
+        gap: 0 20px;
+    }
+
+    .steps__item-img{
+        width: 85px;
+        object-fit: cover;/*Чтобы не растягивало картинку при изменении ширины (высоты)*/
+    }
+
+    .steps__item-text{
+        font-size: 8px;
+    }
+
+    .steps__item::before{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 890px){
+    /*Section Products*/
+
+    .section__inner{
+        grid-template-columns: 200px auto;
+        gap: 0 10px;
+    }
+
+    .products__content{
+        gap: 30px 16px;
+    }
+
+    /*Footer*/
+    
+    .footer__inner{
+    flex-wrap: wrap;
+    }
+
+    .footer__contacts{
+        width: 100%;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .footer__social{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        font-size: 10px;
+    }
+
+    .container{
+        max-width: 640px;
+    }
+
+    .phone::before{/*Phone-svg*/
+        width: 14px;
+        height: 14px;
+        left: -16px;
+        top: -2px;
+        background-size: cover;
+    }
+
+    /*Main section*/
+
+    .top__content{
+        width: 230px;
+    }
+
+    .top__title{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .top__text{
+        margin-bottom: 20px;
+    }
+
+    .top__img{
+        left: 90px;
+    }
+
+    /*About Us*/
+
+    .about__content{
+        min-width: 200px;
+    }
+
+    .title{
+        font-size: 15px;
+    }
+
+    .about__title{
+        margin-bottom: 20px;
+    }
+
+    .about__list{
+        margin-left: 27px;
+        margin-bottom: 33px;
+        gap: 0 10px;
+    }
+
+    .about__item-text{
+        font-size: 8px;
+    }
+
+    .about__item-img{
+        margin-bottom: 6px;
+    }
+
+    .about__item-img--1{
+        width: 120px;
+    }
+
+    .about__item-img--2{
+        width: 190px;
+    }
+
+    .about__item-img--3{
+        width: 120px;
+    }
+
+    /*Section Products*/
+
+    .products__item{
+        width: 200px;
+    }
+
+    .products__item-img{
+        width: 200px;
+        margin-bottom: 6px;
+    }
+
+    .button{
+        font-size: 12px;
+        padding: 10px 26px;
+    }
+
+    .products__item-text{
+        font-size: 8px;
+        margin-bottom: 18px;
+    }
+
+    .products__item-price{
+        margin-bottom: 7px;
+        font-size: 12px;
+    }
+
+    .products__item-title{
+        margin-bottom: 9px;
+        font-size: 12px;
+    }
+
+    /*Section - Наши курсы*/
+
+    .courses__title{
+        padding: 6px;
+        left: -1px;
+        top: 40%;
+    }
+
+    .courses__time{
+        padding: 5px;
+        left: -1px;
+        top: 55%;
+    }
+
+    .courses__price{
+        padding: 10px;
+        right: 0;
+        bottom: 9px;
+    }
+
+    /*Section - Наши преподаватели*/
+
+    .team__img{
+        width: 140px;
+    }
+
+    .team__content{
+        gap: 45px 36px;
+    }
+
+    .team__item-box{
+        width: 109px;
+        padding: 9px 6px 10px;
+        bottom: 8px;
+        right: -24px;
+    }
+
+    .team__item-name{
+        font-size: 8px;
+    }
+
+    .team__item-descr{
+        font-size: 7px;
+    }
+
+    /*Section - Feedback*/
+
+    .feedback__item-video{
+        width: 200px;
+    }
+
+    .feedback__item-img{
+        width: 200px;
+    }
+
+    .feedback__slider{
+        width: 447px;
+    }
+
+    .feedback__item-content{
+        padding-bottom: 45px;
+    }
+
+    .feedback__item-btn{
+        padding: 15px 20px;
+        margin-right: 5px;
+    }
+
+    /*Section - Feedback-2*/
+
+    .promo{
+        padding: 67px 0;
+    }
+
+    .promo__text{
+        font-size: 15px;
+    }
+
+    .promo__link{
+        font-size: 12px;
+    }
+
+    /*Section - Contact Form*/
+
+    .contact-form__img{
+        width: 187px;
+        object-fit: cover;
+    }
+
+    .form{
+        width: 440px;
+        gap: 0 20px;
+        padding: 30px 22px;
+    }
+
+    .contact-form__title{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .contact-form__btn{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 640px){
+    .container{
+        padding: 0 10px;
+    }
+    /*Header*/
+    .menu__header-list{/*Всплывающее бургер-меню*/
+        width: 153px;
+        background-color: #7B6152;
+        color: #FFF8F3;
+        flex-direction: column;
+        gap: 20px 0;
+        padding: 25px 35px 25px 45px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /*Анимация для плавного появления при клике*/
+        transform: translateY(-110%);
+        transition: transform .5s ease;
+
+        z-index: 5;
+    }
+
+    .menu__header-list.menu--open{/*Всплывающее бургер-меню*/
+        transform: translateY(0)
+    }
+
+    .menu__btn{/*Кнопка - пять полос (для бургер меню)*/
+        display: flex;
+    }
+
+    .menu__header{
+        order: 1;
+    }
+    
+    /*Section Products*/
+
+    .section__inner{/*Меняется расположение компонентов*/
+        display: block;
+    }
+
+    .section__descr{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    /*Section - Наши преподаватели*/
+
+    .team__item-box{
+        right: auto;
+        left: 88px;
+    }
+}
+
+@media (max-width: 500px){
+    .footer{
+        padding: 50px 0;
+        font-size: 14px;
+    }
+
+    .footer__inner{
+        flex-direction: column;
+    }
+
+    .menu__footer{
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .menu__footer-list{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px){
+    .top__img-l {
+        display: none;
+    }
+
+    .top__img-m {
+        display: flex;
+        left: 80px;
+        margin-top: 50px;
+    }
+
+    .top__content{
+        width: 180px;
+    }
+
+    .top__text{
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+
+    .top__title{
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .top__buy{
+        font-size: 12px;
+        padding: 14px 41px;
+    }
+
+    .top{
+        padding: 30px 0 50px;
+    }
+
+    /*About Us*/
+
+    .about{
+        margin-bottom: 50px;
+    }
+
+    .about__content{
+        min-width: 170px;
+    }
+
+    .about__inner{
+        align-items: flex-end;
+    }
+
+    .about__list{
+        margin-left: 0;
+        padding-left: 10px;
+        gap: 0 5px;
+        align-items: flex-end;/*Выравнивание по горизонтали*/
+        margin-bottom: 0;
+    }
+
+    .about__item-text{
+        display: none;
+    }
+
+    .about__item-img--1, .about__item-img--3{
+        width: 80px;
+    }
+
+    .about__item-img--2{
+        width: 140px;
+    }
+
+    /*Section Products*/
+
+    .products{
+        padding-bottom: 50px;
+    }
+
+    .section__content-descr{
+        padding-bottom: 62px;
+    }
+
+    .section__descr{
+        margin: 0 auto 30px;
+        width: 300px;
+    }
+
+    /*Section - Этапы создания свечей*/
+
+    .steps__list{
+        gap: 25px 40px;
+    }
+
+    /*Section - Наши преподаватели*/
+
+    .team{
+        margin-bottom: 50px;
+    }
+
+    /*Section - Certificates*/
+
+    .certificates__content img{
+        width: 200px;
+    }
+
+    .certificates__slider{
+        width: 415px;
+        margin: 0 auto;/*Центрирует, когда есть блок с фиксируемой шириной*/
+    }
+
+    /*Section - Feedback-2*/
+
+    .promo{
+        padding: 42px 0;
+    }
+
+    .contact-form__img{
+        display: none;
+    }
+
+    /*Section - Contact Form*/
+
+    .contact-form__input::placeholder{
+        font-size: 10px;
+    }
+
+    .contact-form{
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 404px){
+    /*Section - Этапы создания свечей*/
+
+    .steps__list{
+        gap: 20px 25px;
+    }
+
+    .steps__item{
+        gap: 0 16px;
+    }
+
+    .steps__item-img{
+        width: 66px;
+    }
+
+    /*Section - Наши курсы*/
+
+    .courses__content{
+        grid-template-columns: auto;/*Для расположения элементов в однй колонку(при определенной ширине экрана)*/
+    }
+
+    /*Section - Наши преподаватели*/
+
+    .team__content{
+        grid-template-columns: auto;
+    }
+
+    .team__img{
+        width: 204px;
+    }
+
+    .team__item-name{
+        font-size: 12px;
+    }
+
+    .team__item-descr{
+        font-size: 10px;
+    }
+
+    .team__item-box{
+        width: 151px;
+        bottom: 15px;
+        left: 148px;
+    }
+}
+
+@media (max-width: 360px){
+    .top__img-l,
+    .top__img-m {
+        display: none;
+    }
+
+    .top__img-s {
+        display: flex;
+        left: 5px;
+        margin-top: 50px;
+        width: 184px;
+        
+    }
+
+    .top__img{
+        left: auto;
+        right: 0;
+    }
+
+    .top__content{
+        width: 200px;
+        padding: 20px 0 0;
+    }
+
+    .top__text{
+        font-size: 10px;
+    }
+
+    .top__title{
+        font-size: 18px;
+    }
+
+    /*About Us*/
+
+    body{
+        font-size: 8px;
+    }
+
+    .about{
+        padding-top: 25px;
+        padding-bottom: 10px;
+    }
+
+    .about__content{
+        min-width: 233px;
+    }
+
+    .title{
+        margin-bottom: 10px;
+    }
+
+    .about__list{
+        padding-left: 12px;
+        margin-left: 12px;
+        padding-bottom: 30px;
+        gap: 0 15px;
+    }
+
+    .about__item-img--2{
+        display: none;
+    }
+
+    /*Section Products*/
+
+    .section__descr{
+        margin: 0 auto 25px;
+        width: 235px;
+    }
+
+    .products__item{
+        width: 150px;
+    }
+
+    .products__content{
+        gap: 40px 7px;
+    }
+
+    .products__item-img{
+        width: 150px;
+    }
+
+    .button{
+        font-size: 8px;
+        padding: 8px 20px;
+    }
+
+    .products__item-price{
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .products__item-title{
+        font-size: 10px;
+    }
+
+    .products__item-text{
+        margin-bottom: 16px;
+    }
+
+    /*Section - Этапы создания свечей*/
+
+    .steps__item-text{
+        font-size: 6px;
+    }
+
+    .steps{
+        padding: 0 0 50px;
+    }
+
+    /*Section - Наши курсы*/
+
+    .courses__item, .courses__item img{
+        width: 255px;
+    }
+
+    /*Section - Feedback*/
+
+    .feedback__item{
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .feedback__slider{
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .feedback__item-img{
+        width: 250px;
+        margin: 0 auto 20px;
+    }
+
+    .feedback__item-video{
+        width: 250px;
+    }
+
+    .feedback__item-btn{
+        max-width: 100px;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    /*Section - Certificates*/
+
+    .certificates__slider{
+        width: 200px;
+    }
+
+    /*Section - Feedback-2*/
+
+    .promo__text{
+        margin-right: 50px;
+    }
+}
